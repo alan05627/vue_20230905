@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/daily.css">
+    <link rel="stylesheet" href="css/animate.css-4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+   <div id="app">
+    <!--v-model 綁定-->
+        <div class="demo">
+            <h2>v-model 綁定</h2>
+            <input type="text" class="form-control" v-model="mytitle">
+            <p class="h3">你輸入的字為: {{ mytitle }}</p>
+            <div v-text="mytitle"></div>
+            <div v-html="mytitle"></div>
+        </div>
+
+        <!-- 2. v-bind 綁定 -->
+        <div class="demo">
+            <h2>2. v-bind 綁定(簡寫-> :)</h2>
+            <img v-bind:src="imgSrc" alt="" v-bind:class="classW25">
+            <br>
+            <img v-bind:src="imgSrc01" alt="" v-bind:class="classW50">
+            <input type="text" class="form-control my-3" v-model="imgSrc01">
+        </div>
+
+        <!-- 3. v-if and v-for -->
+        <div class="demo">
+            <h2>3. v-if and v-for</h2>
+            <ul class="list-group">
+                <li class="list-group-item" v-for="(item, key) in list">
+                    {{key+1}}.{{item.product}} 1斤 ==>{{item.price}}元
+                </li>
+            </ul>
+        </div>
+   </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const App = {
+            data(){
+                return{
+                    text01: 'Hello World123!',
+                    text02: 'Hello002',
+                    mytitle: 'vue教學示範',
+                    imgSrc: 'images/apple laptop.avif',
+                    imgSrc01: 'https://plus.unsplash.com/premium_photo-1673028716382-e5cd08c2e368?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80',
+                    classW50: 'w-50',
+                    classW25: 'w-25',
+                    list:[
+                        {
+                            product: '草莓',
+                            price: 100
+                        },
+                        {
+                            product: '香蕉',
+                            price: 50
+                        },
+                        {
+                            product: '西瓜',
+                            price: 200
+                        },
+                        {
+                            product: '水蜜桃',
+                            price: 150
+                        },
+                        {
+                            product: '哈密瓜',
+                            price: 80
+                        },
+                    ]
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+</html>

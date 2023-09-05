@@ -1,0 +1,138 @@
+:root{
+    --mycolor01: #EB8F90;
+    --mycolor02: #FFB471;
+    --mycolor03: #ADBED2;
+    --mycolor04: #12406A;
+    --mycolor05: #535755;
+    --mycolor06: #69454F;
+    --mycolor07: #715ca8;
+    --mycolor08: #028c6a;
+    --mycolor09: #d3b7d8;
+    --mycolor10: #78c5ae;
+}
+        .body{
+            background-color: var(--mycolor04);
+            padding-top: 15px;
+        }
+        .wrapper{
+            margin: 0 auto;
+            width: 1024px; 
+        }
+        .wrapper img{
+            width: 100%;
+        }
+        .wrapper .logo{
+            width: 100%;
+            height: 200px;
+            background-image: url(../images/galaxy.avif);
+            background-position: center center;
+            background-size: cover;
+        }
+        nav{
+            background-color: var(--mycolor03);
+            text-align: center
+        }
+        nav ul{
+            display: inline-block;
+        }
+        nav ul li{
+            float: left;
+            list-style-type: none;
+        }
+        nav ul li a{
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: var(--mycolor07);
+            margin-right: 5px;
+            color: var(--mycolor01);
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        nav ul li a:hover{
+            background-color: var(--mycolor08);
+            color: var(--mycolor04);
+        }
+        .link nav{
+            background-color: var(--mycolor09);
+            text-align: center;
+        }
+        .link nav ul{
+            display: inline-block;
+        }
+        .link nav ul li{
+            float: left;
+            list-style-type: none;
+        }
+        .link nav ul li a{
+            display:block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: var(--mycolor06);
+            margin-right: 10px;
+            color: var(--mycolor8);
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        .link nav ul li a:hover{
+            background-color: var(--mycolor08);
+            color: var(--mycolor04);
+        }
+        #nav_1{
+            background-color: var(--mycolor02);
+            color: var(--mycolor08);
+        }
+        .content_in{
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+            background-color: var(--mycolor09);
+            margin-top: 10px;
+        }
+        .content_in a{
+            display: block;
+            background-color: var(--mycolor06);
+            width: 140px;
+            height: 40px;
+            margin: 0 auto;
+            text-decoration: none;
+            font-weight: bolder;
+            color: var(--mycolor07);
+            line-height: 40px;
+        }
+        .content_in h1{
+            color: var(--mycolor08);
+            margin-bottom: 30px;
+        }
+        .content_in p{
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .content_in a:hover{
+            color: var(--mycolor01);
+            background-color: var(--mycolor02);
+        }
+        .footer{
+            background-color: var(--mycolor01);
+            color: var(--mycolor10);
+            text-align: center;
+
+        }
+        .footer p{
+            font-size: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        @media screen and (max-width: 1024px){
+            .wrapper{
+                width: 95%;
+            }
+        }
+    
